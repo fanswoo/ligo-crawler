@@ -1,0 +1,37 @@
+{
+  "name": "@fanswoo/ligo-crawler",
+  "scripts": {
+    "start": "npm run watch:package-update",
+    "build": "tsc --project ./",
+    "watch:crawl": "nodemon --watch 'src/**/*.ts' --exec ts-node -r tsconfig-paths/register -- ./src/bin/crawl.ts --platform npm --disable-module-alias",
+    "crawl": "node ./lib/bin/crawl.js"
+  },
+  "bin": {
+    "package-source": "./lib/bin/package-source.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "cli-table3": "^0.6.0",
+    "colors": "^1.4.0",
+    "commander": "^8.2.0",
+    "dotenv": "^10.0.0",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.1.5",
+    "module-alias": "^2.2.2",
+    "process.argv": "^0.6.0"
+  },
+  "devDependencies": {
+    "@fanswoo/eslint-config-workspace": "^1.3.11",
+    "@fanswoo/workspace-environment": "^1.3.11",
+    "@types/clear": "^0.1.2",
+    "@types/figlet": "^1.5.4",
+    "@types/inquirer": "^8.1.2",
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^16.9.6",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.3.0",
+    "tsconfig-paths": "^3.11.0",
+    "typescript": "^4.4.4"
+  }
+}
